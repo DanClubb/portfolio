@@ -1,0 +1,45 @@
+nav {
+  background-color: var(--white);
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--dark-grey);
+  text-decoration: none;
+  padding-bottom: 4px;
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 5px;
+  background-color: var(--green);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::before,
+nav a:focus::before {
+  width: 100%;
+}
+
+nav a:focus {
+  outline: none;
+}
+
+.home {
+  margin-right: auto;
+}
